@@ -1,7 +1,64 @@
 import React from 'react'
 import { experiences } from '../constants/Constants'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger, SplitText } from 'gsap/all'
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Experience() {
+  useGSAP(() => {
+    const title = new SplitText('.sectionExpTitle', { type: 'words' });
+    const paragraph = new SplitText('.exptSubTitle', { type: 'words' });
+
+    gsap.from(paragraph.words, {
+      opacity: 0,
+      yPercent: 100,
+      ease: "expo.out",
+      stagger: 0.06,
+      scrollTrigger: {
+        trigger: ".exptSubTitle",
+        start: "top 85%",          
+        toggleActions: "play none none none",
+      },
+    });
+    
+    gsap.from(title.words, {
+      yPercent: 100,
+      duration: 0.8,
+      ease: 'expo.out',
+      stagger: 0.04,
+      delay: 0.8,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".sectionExpTitle",
+        start: "top 85%",          
+        toggleActions: "play none none none",
+      },
+    });
+
+    gsap.fromTo('.sectionExpMiniTitle',
+      {
+        x: -200,
+        opacity:0,
+      }, 
+      {
+        x: 0,
+        opacity:1,
+        duration: 1,
+        delay: 1,
+        scrollTrigger: {
+        trigger: ".sectionExpTitle",
+        start: "top 85%",          
+        toggleActions: "play none none none",
+      },
+      }
+    );
+
+  },[]);
+
+
   return (
     <section id='Experience' className='py-32 relative overflow-hidden'>
       {/* BACKGROUND */}
@@ -17,9 +74,13 @@ export default function Experience() {
       <div className='container mx-auto px-6 relative z-10'>
         {/* SECTION HEADER */}
         <div className=' mb-16'>
-          <span className='text-secondary text-sm font-medium tracking-wider uppercase animate-fade-in'>Career Journey</span>
-          <h2 className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground'>Hands-On Experience That Shows Growth.</h2>
-          <p className='text-muted-foreground'>Learning, building, and improving with every opportunity and experience.</p>
+          <div className='sectionExpMiniTitle'>
+            <span className=' text-secondary text-sm font-medium tracking-wider uppercase'>Career Journey</span>
+          </div>
+          <div className="sectionExpTitle">
+            <h2 className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground'>Hands-On Experience That Shows Growth.</h2>
+          </div>
+          <p className='exptSubTitle text-muted-foreground'>Learning, building, and improving with every opportunity and experience.</p>
         </div>
 
         {/* TIMELINE */}

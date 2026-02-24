@@ -4,10 +4,32 @@ import { ArrowRight, Download } from 'lucide-react'
 import { shortAboutSelf, socMedLinks } from '../constants/Constants'
 import Typewriter from "typewriter-effect";
 import ButtonAnimate from '../components/ButtonAnimate';
-
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
 
 
 export default function Hero() {
+  useGSAP(() => {
+    const heroSplit = new SplitText('.aboutTitle', { type: 'words' });
+    const paragraph = new SplitText('.heroAboutSelf', { type: 'lines' });
+
+    heroSplit.chars.forEach((char) => {
+      char.classList.add("text-gradient");
+    });
+
+    gsap.from(heroSplit.chars, {
+      yPercent: 100,
+      duration: 0.8,
+      ease: 'expo.out',
+      stagger: 0.04,
+      delay: 0.8,
+      opacity: 0,
+    })
+  },[])
+
+
+  
   return (
     <section className='relative min-h-screen flex items-center overflow-hidden'>
       
@@ -39,17 +61,22 @@ export default function Hero() {
             <div className=''>
               <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animate-fade-in animation-delay-900'>
                 <span className='w-2 h-2 bg-primary rounded-full animate-pulse heroBadge' />
-                Developer is Available to Work
+                Developer is Oepn to Work
               </span>
             </div>
 
             {/* HEADLINE */}
             <div className='space-y-3'>
-              <h1 className="font-bold typeWriter text-4xl lg:text-3xl">
+              {/* <h1 className='font-black text-4xl heroHeaderMain scale-y-125'>Hi, You can call me Marv,</h1> */}
+              <h2 className='text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground text-gradient heroHeader2Main '>Hi, You can call me Marv,</h2>
+              <h1 className="font-bold typeWriter text-4xl lg:text-3xl text-primary">
                 <Typewriter
                   options={{
                     strings: [
-                      "Hi, you can call me <span class='HeroTextGradient'>Marv</span>, a Full-Stack Web Developer",
+                      "a Front-End Web Developer.",
+                      "a Back-End Web Developer.",
+                      "a Full-Stack Web Developer.",
+                      "a Software Engineer.",
                     ],
                     autoStart: true,
                     loop: true,
@@ -58,7 +85,7 @@ export default function Hero() {
                   }}
                 />
               </h1>
-              <p className='text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-400'>
+              <p className='text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-400 heroAboutSelf'>
                 {shortAboutSelf}
               </p>
             </div>
