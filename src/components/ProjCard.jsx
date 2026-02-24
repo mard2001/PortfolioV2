@@ -7,7 +7,7 @@ export const ProjCard = ({project, onOpen}) => {
 
     return (
         <>
-            <div className='group glass rounded-xl shadow-xl shadow-xl/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1'>
+            <div className='projectCard group glass rounded-xl shadow-xl shadow-xl/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1'>
                 <div className='relative text-6xl font-bold text-gray-600 flex items-center justify-center mb-4 overflow-hidden rounded-t-xl'>
                     <img src={`/images/projectScreenshots/${project.images[0]}`} alt="" className='h-50 w-100 rounded-t-xl hover:scale-125 transition-all duration-1000 group-hover:blur-sm' />
                     <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">

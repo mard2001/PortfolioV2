@@ -6,12 +6,14 @@ import { Building, Cable, Calendar, CalendarDaysIcon, ChartLineIcon, Code, CodeS
 import gsap from 'gsap'
 import { ScrollTrigger, SplitText } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
+import { useRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const [open, setOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(null)
+  const scrollRef = useRef();
 
   const handleOpen = (project) => {
     console.log("Opening modal:", project)
@@ -22,6 +24,7 @@ export default function Projects() {
   useGSAP(() => {
     const title = new SplitText('.projTitle', { type:'words' });
     const paragraph = new SplitText('.projSubHeader', { type: 'words' });
+    const projectCards = new gsap.utils.toArray(scrollRef.current.children);
 
     gsap.from(paragraph.words, {
       opacity: 0,
@@ -66,6 +69,28 @@ export default function Projects() {
       },
       }
     );
+
+    projectCards.forEach((element) => {
+      gsap.fromTo( element, 
+        {
+          y: -50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+          trigger: element,
+            start: "top 80%",  
+            end: "top 20%",
+          },
+        }
+      )
+    });
+
+
   },[]);
 
   return (
@@ -83,7 +108,7 @@ export default function Projects() {
             <h2 className='projTitle text-4xl md:text-5xl font-bold mt-3 mb-2 animate-fade-in animation-delay-100 text-secondary-foreground'>Featured Deployments</h2>
             <p className='projSubHeader text-muted-foreground'>Transforming complex business requirements into elegant digital products.</p>
           </div>
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
+          <div ref={scrollRef} className='projectsContainer grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
             {projects.map((project, indx) => (
               <ProjCard key={indx} project={project} onOpen={handleOpen}/>
             ))}

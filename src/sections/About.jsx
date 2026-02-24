@@ -59,25 +59,25 @@ export default function About() {
       }
     );
 
-    
-
-    highlightCards.forEach((card) => {
-      gsap.from('.highlightCard',
+    gsap.fromTo( highlightCards, 
       {
-        y: -20,
-        rotation: 0,
+        x: 150,
+        opacity: 0,
+      },
+      {
+        x: 0,
         opacity: 1,
-        duration:  0.8,
-        stagger: 0.2,
+        duration: 1.2,       
+        ease: "power3.out",   
+        stagger: 0.5,        
         scrollTrigger: {
-            trigger: card,
-            start: "top 90%",
-            end: "top 30%",  
-            scrub: true
+          trigger: ".cardsContainer",
+          start: "top 80%",  
+          end: "top 20%",
+          scrub: true, 
         },
-        ease: 'power1.inOut'
-      })
-    })
+      }
+    );
 
   },[])
 
@@ -106,7 +106,7 @@ export default function About() {
             </div>
 
             {/* RIGHT COLUMN */}
-            <div ref={scrollRef} className='grid sm:grid-cols-2'>
+            <div ref={scrollRef} className='cardsContainer grid sm:grid-cols-2'>
               {highlights.map((highlight, idx) => (
                 <TraitsCard key={idx} quality={highlight} idx={idx} />
               ))}

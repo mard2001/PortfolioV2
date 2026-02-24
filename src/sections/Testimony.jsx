@@ -76,7 +76,9 @@ export default function Testimony() {
     
       <section  className='container mx-auto px-6 relative z-10'>
         <div className=' mb-5'>
-          <span className='testimonyMiniTitle text-secondary text-sm font-medium tracking-wider uppercase'>Voices of Trust & Partnership</span>
+          <div className="testimonyMiniTitle">
+            <span className=' text-secondary text-sm font-medium tracking-wider uppercase'>Voices of Trust & Partnership</span>
+          </div>
           <h2 className='sectionTestimonyTitle text-4xl md:text-5xl font-bold mt-4 mb-6 animation-delay-100 text-secondary-foreground'>What Others Say.</h2>
           <p className='testimonyParagraphs text-muted-foreground'>Collaborations that turned goals into results.</p>
         </div>

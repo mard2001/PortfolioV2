@@ -25,12 +25,16 @@ export default function Technologies() {
                 rotation: 0,
                 opacity: 1,
                 duration:  0.8,
-                stagger: 0.2,
+                stagger: {
+                    amount: 1.5,
+                    from: 'center'
+                },
                 scrollTrigger: {
                     trigger: card,
                     start: "top 90%",
-                    end: "top 30%",  
-                    scrub: true
+                    end: "top 60%",  
+                    scrub: true,
+                    
                 },
                 ease: 'power1.inOut'
             })
