@@ -2,6 +2,7 @@ import React from 'react'
 import { contactInfo } from '../constants/Constants'
 import { Copy, Mail, Check, PhoneForwarded } from 'lucide-react';
 import { useState } from "react";
+import MdiReact from '@mdi/react'
 
 const Footer = () => {
     const [copied, setCopied] = useState(false);
@@ -51,11 +52,13 @@ const Footer = () => {
                 
             <div className='flex flex-row justify-center'>
                 {contactInfo.map((contact, indx) => {
+                    const Icon = MdiReact.default
                     return(
                         <div 
                             onClick={() => window.open(contact.link, "_blank", "noopener,noreferrer")}
                             className='mt-8 mx-2 flex flex-row rounded-xl bg-slate-900/70 px-4 py-3 text-sm text-muted-foreground shadow-lg backdrop-blur-md border border-white/5 hover:cursor-pointer hover:text-foreground/80' key={indx} >
-                            <contact.icon className='w-5 h-5 mr-1' />
+                            {/* <contact.icon className='w-5 h-5 mr-1' /> */}
+                                <Icon path={contact.icon} size={0.8} className='w-5 h-5 mr-1' />
                             {contact.title}
                         </div>
                     );
@@ -65,7 +68,7 @@ const Footer = () => {
             <hr className='text-muted-foreground/10 mt-20 mb-10'/>
 
 
-            <p className='text-sm text-muted-foreground/25 mb-15'>&#169; 2026 Marvin Navarro Dev • All Rights Reserve • Crafted with precision and passion</p>
+            <p className='text-sm text-muted-foreground/25 mb-15 mx-10'>&#169; 2026 Marvin Navarro Dev • All Rights Reserve • Crafted with precision and passion</p>
             
 
         </div>

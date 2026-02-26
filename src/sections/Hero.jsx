@@ -7,6 +7,7 @@ import ButtonAnimate from '../components/ButtonAnimate';
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import MdiReact from '@mdi/react'
 
 
 export default function Hero() {
@@ -61,7 +62,7 @@ export default function Hero() {
             <div className=''>
               <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animate-fade-in animation-delay-900'>
                 <span className='w-2 h-2 bg-primary rounded-full animate-pulse heroBadge' />
-                Developer is Oepn to Work
+                Developer is Open to Work
               </span>
             </div>
 
@@ -105,11 +106,10 @@ export default function Hero() {
             <div className='flex items-center text-muted/50'>
               <span className='pr-3'></span>
               {socMedLinks.map((social, idx) => {
-                const Icon = social.icon;
-
+                const Icon = MdiReact.default
                 return (
                   <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className=" mx-1 rounded-[10px] p-2 glass hover:bg-primary/10 hover:text-primary transition-all duration-10 ">
-                    <Icon className="w-5 h-5" />
+                    <Icon path={social.icon} size={0.8} />
                   </a>
                 );
               })}

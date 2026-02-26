@@ -1,4 +1,6 @@
 import { Code2, CodeSquare, Facebook, FacebookIcon, Github, HandFist, Handshake, Linkedin, Mail, MonitorSmartphone, Users } from "lucide-react";
+import { mdiGithub, mdiFacebook, mdiLinkedin } from '@mdi/js';
+
 
 export const navLinks = [
     { href: "#About", label: "About" },
@@ -10,9 +12,9 @@ export const navLinks = [
 export const shortAboutSelf = `A software engineer specializing in front-end and back-end web development. I build accessible, well-designed, and high-performance websites using modern web technologies.`;
 
 export const socMedLinks = [
-    {icon: Github, href:"https://github.com/mard2001"},
-    {icon: Linkedin, href:"https://www.linkedin.com/in/marvin-navarro-01/"},
-    {icon: Facebook, href:"https://www.facebook.com/Marvin.Navarro.01/"},
+    {icon: mdiGithub, href:"https://github.com/mard2001"},
+    {icon: mdiLinkedin, href:"https://www.linkedin.com/in/marvin-navarro-01/"},
+    {icon: mdiFacebook, href:"https://www.facebook.com/Marvin.Navarro.01/"},
     // {icon: Mail, href:"https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTQNsBgCljnKFGGKHtmLJkrpcmrwBCqmqdBmMClddWXGHpvlWkkPsbnNxFbKVwhwbfmfCFV"},
 ];
 
@@ -327,9 +329,9 @@ export const testimonies = [
 ]
 
 export const contactInfo = [
-    { icon: Github, title: 'GitHub', link: 'https://github.com/mard2001'},
-    { icon: Linkedin, title: 'LinkedIn', link: 'https://www.linkedin.com/in/marvin-navarro-01'},
-    { icon: FacebookIcon, title: 'Facebook', link: 'https://www.facebook.com/Marvin.Navarro.01/'},
+    { icon: mdiGithub, title: 'GitHub', link: 'https://github.com/mard2001'},
+    { icon: mdiLinkedin, title: 'LinkedIn', link: 'https://www.linkedin.com/in/marvin-navarro-01'},
+    { icon: mdiFacebook, title: 'Facebook', link: 'https://www.facebook.com/Marvin.Navarro.01/'},
 ]
 
 

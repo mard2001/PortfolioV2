@@ -33,7 +33,7 @@ export default function Navbar() {
 
                 {/* CALL TO ACTION BTN */}
                 <a href="#Contact">
-                    <button className="px-6 py-2 font-medium text-sm bg-primary text-primary-foreground w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] rounded-2xl hover:cursor-pointer">
+                    <button className="hidden md:inline px-6 py-2 font-medium text-sm bg-primary text-primary-foreground w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] rounded-xl hover:cursor-pointer">
                         Contact Me
                     </button>
                 </a>
@@ -54,8 +54,8 @@ export default function Navbar() {
                                 {links.label}
                             </a>
                         ))}
-                        <a href="#Contact">
-                            <Button size='sm' onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
+                        <a href="#Contact" onClick={() => setIsMobileMenuOpen(false)}>
+                            <Button size='sm'>Contact Me</Button>
                         </a>
                     </div>
                 </div>)

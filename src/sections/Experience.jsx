@@ -99,7 +99,7 @@ export default function Experience() {
                 </div>
 
                 {/* CONTENT */}
-                <div className={`group pl-8 md:pl-0 ${idx%2 == 0 ? "md:pr-8 md:text-right" : "md:col-start-2 md:pl-8"}`}>
+                <div className={`group pl-8 md:pl-0 duration-700 hover:-translate-y-5 ${idx%2 == 0 ? "md:pr-8 md:text-right" : "md:col-start-2 md:pl-8"}`}>
                   <div className={` p-4 rounded-2xl border border-transparent hover:border-b-primary/20 hover-glass transition-all duration-500 border-b-5`}>
                     <span className='text-sm text-primary/50 group-hover:text-primary font-medium transition-all duration-800'>{exp.period}</span>
                     <h3 className='text-xl font-semi-bold mt-2'>{exp.role}</h3>

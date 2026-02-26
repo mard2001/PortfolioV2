@@ -41,7 +41,7 @@ export const ProjectModal = ({open, onClose, content}) => {
                         <hr className='text-xs text-[#2A364B]' />
                     </div>
                     <div className='flex flex-col-reverse md:flex-row gap-4'>
-                        <div className="grow bg-red md:h-full md:overflow-y-auto  md:overflow-x-hidden pr-4">
+                        <div className="grow bg-red md:h-full md:overflow-y-auto md:overflow-x-hidden pr-4">
                             <div className="projectDescDiv">
                                 <div className='projectHeader mb-2'>
                                     <Info size={20} className='text-primary mr-2' />
@@ -134,7 +134,7 @@ export const ProjectModal = ({open, onClose, content}) => {
                             )}
                             
                         </div>
-                        <div className="flex-none md:w-65">
+                        <div className="flex-none md:w-65 lg:w-80 pr-5">
                             <div className='rounded-2xl border-1 border-[#2A364B] p-5'>
                                 <span className='uppercase text-sm'>Project Metadata</span>
 
