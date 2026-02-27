@@ -214,6 +214,10 @@
     animation-delay: 900ms;
   }
 
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+
   .groud:hover .animated-border-path {
     animation: animated-border 1.5s linear infinite;
   }

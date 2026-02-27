@@ -22,7 +22,7 @@ export const TestimonyCard = ({testimony, idx}) => {
 
 
     return (
-        <div className='relative overflow-hidden max-w-lg m-2 rounded-[30px] shadow-2xl 
+        <div className='testimonialCards relative overflow-hidden max-w-lg m-2 rounded-[30px] shadow-2xl 
                 glass' onMouseEnter={()=>setVisible(true)} onMouseLeave={()=>setVisible(false)} ref={divRef} onMouseMove={handleMouseMove}>
             <div className={`pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-primary/90 
                     via-primary to-primary/80 w-[50px] h-100 absolute z-0 transition-opacity duration-500 

@@ -12,21 +12,52 @@ import MdiReact from '@mdi/react'
 
 export default function Hero() {
   useGSAP(() => {
-    const heroSplit = new SplitText('.aboutTitle', { type: 'words' });
-    const paragraph = new SplitText('.heroAboutSelf', { type: 'lines' });
+    const heroSplit = new SplitText('.heroHeader2Main', { type: 'chars, words' });
+    const paragraph = new SplitText('.heroAboutSelf', { type: 'words' });
 
     heroSplit.chars.forEach((char) => {
       char.classList.add("text-gradient");
     });
 
+    
     gsap.from(heroSplit.chars, {
-      yPercent: 100,
+      xPercent: 100,
       duration: 0.8,
-      ease: 'expo.out',
+      ease: 'power2.inOut',
       stagger: 0.04,
       delay: 0.8,
       opacity: 0,
     })
+
+    gsap.from(paragraph.words, {
+      opacity: 0,
+      yPercent: 100,
+      ease: "expo.out",
+      stagger: 0.09,
+    });
+
+    gsap.from(".profileImgDiv", {
+      y: 100,            
+      opacity: 0,       
+      scale: 0.8,        
+      duration: 1, 
+      delay:2,      
+      ease: "back.out(2)",  
+    });
+
+    gsap.fromTo('.availabilityDiv',
+      {
+        x: -200,
+        opacity:0,
+      }, 
+      {
+        x: 0,
+        opacity:1,
+        duration: 1,
+        delay: 2.5
+      }
+    );
+
   },[])
 
 
@@ -59,8 +90,8 @@ export default function Hero() {
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
           {/* LEFT COLUMN */}
           <div className='space-y-8'>
-            <div className=''>
-              <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animate-fade-in animation-delay-900'>
+            <div className='availabilityDiv'>
+              <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary'>
                 <span className='w-2 h-2 bg-primary rounded-full animate-pulse heroBadge' />
                 Developer is Open to Work
               </span>
@@ -69,8 +100,8 @@ export default function Hero() {
             {/* HEADLINE */}
             <div className='space-y-3'>
               {/* <h1 className='font-black text-4xl heroHeaderMain scale-y-125'>Hi, You can call me Marv,</h1> */}
-              <h2 className='text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground text-gradient heroHeader2Main '>Hi, You can call me Marv,</h2>
-              <h1 className="font-bold typeWriter text-4xl lg:text-3xl text-primary">
+              <h2 className='text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground text-gradient heroHeader2Main '>Hi, You can call me Marv,</h2>
+              <h1 className="font-bold typeWriter text-4xl lg:text-3xl text-primary animate-fade-in animation-delay-2000">
                 <Typewriter
                   options={{
                     strings: [
@@ -86,7 +117,7 @@ export default function Hero() {
                   }}
                 />
               </h1>
-              <p className='text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-400 heroAboutSelf'>
+              <p className='text-lg text-muted-foreground max-w-lg heroAboutSelf'>
                 {shortAboutSelf}
               </p>
             </div>
@@ -117,7 +148,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className='relative animate-fade-in animation-delay-300'>
+          <div className='relative profileImgDiv'>
             {/* PROFILE IMAGE */}
             <div className='relative max-w-md mx-auto'>
               <div className='absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse-glow'/>

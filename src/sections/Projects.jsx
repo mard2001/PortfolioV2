@@ -73,14 +73,16 @@ export default function Projects() {
     projectCards.forEach((element) => {
       gsap.fromTo( element, 
         {
-          y: -50,
+          y: 50,
           opacity: 0,
+          scale: 1.1,
         },
         {
-          y: 0,
+          scale: 1,
           opacity: 1,
-          duration: 1.2,
           ease: "power3.out",
+          stagger: 0.5,
+          repeat: 1,
           scrollTrigger: {
           trigger: element,
             start: "top 80%",  
@@ -108,7 +110,7 @@ export default function Projects() {
             <h2 className='projTitle text-4xl md:text-5xl font-bold mt-3 mb-2 animate-fade-in animation-delay-100 text-secondary-foreground'>Featured Deployments</h2>
             <p className='projSubHeader text-muted-foreground'>Transforming complex business requirements into elegant digital products.</p>
           </div>
-          <div ref={scrollRef} className='projectsContainer grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
+          <div ref={scrollRef} className='projectsContainer mb-20 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
             {projects.map((project, indx) => (
               <ProjCard key={indx} project={project} onOpen={handleOpen}/>
             ))}

@@ -64,6 +64,26 @@ export default function Testimony() {
       },
       }
     );
+
+    gsap.utils.toArray('.testimonialCards').forEach((card) => {
+      ScrollTrigger.create({
+        trigger: card,
+        start: "top 65%",
+        onEnter: () => {
+          gsap.fromTo(card,
+            { scale: 1 },
+            {
+              scale: 1.05,
+              duration: 0.5,
+              yoyo: true,
+              repeat: 1,
+              ease: "expo.out",
+            }
+          );
+        }
+      });
+    });
+
   },[]);
 
   return (

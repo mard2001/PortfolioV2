@@ -11,6 +11,7 @@ export default function Experience() {
   useGSAP(() => {
     const title = new SplitText('.sectionExpTitle', { type: 'words' });
     const paragraph = new SplitText('.exptSubTitle', { type: 'words' });
+    const cards = gsap.utils.toArray('.experienceCard');
 
     gsap.from(paragraph.words, {
       opacity: 0,
@@ -49,12 +50,28 @@ export default function Experience() {
         duration: 1,
         delay: 1,
         scrollTrigger: {
-        trigger: ".sectionExpTitle",
-        start: "top 85%",          
-        toggleActions: "play none none none",
-      },
+          trigger: ".sectionExpTitle",
+          start: "top 85%",          
+          toggleActions: "play none none none",
+        },
       }
     );
+    cards.forEach((card) =>{
+      gsap.fromTo(card,
+        {
+          scale: 1
+        },{
+          scale: 1.05,
+          duration: 0.5,
+          yoyo: true,
+          repeat: 1,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",          
+          },
+        })
+    })
 
   },[]);
 
@@ -99,7 +116,7 @@ export default function Experience() {
                 </div>
 
                 {/* CONTENT */}
-                <div className={`group pl-8 md:pl-0 duration-700 hover:-translate-y-5 ${idx%2 == 0 ? "md:pr-8 md:text-right" : "md:col-start-2 md:pl-8"}`}>
+                <div className={`experienceCard group pl-8 md:pl-0 duration-700 hover:-translate-y-5 ${idx%2 == 0 ? "md:pr-8 md:text-right" : "md:col-start-2 md:pl-8"}`}>
                   <div className={` p-4 rounded-2xl border border-transparent hover:border-b-primary/20 hover-glass transition-all duration-500 border-b-5`}>
                     <span className='text-sm text-primary/50 group-hover:text-primary font-medium transition-all duration-800'>{exp.period}</span>
                     <h3 className='text-xl font-semi-bold mt-2'>{exp.role}</h3>
