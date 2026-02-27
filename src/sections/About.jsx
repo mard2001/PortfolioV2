@@ -61,18 +61,18 @@ export default function About() {
 
     gsap.fromTo( highlightCards, 
       {
-        x: 150,
+        x: 100,
         opacity: 0,
       },
       {
         x: 0,
         opacity: 1,
-        duration: 1.2,       
+        duration: 3,       
         ease: "power3.out",   
         stagger: 0.5,        
         scrollTrigger: {
           trigger: ".cardsContainer",
-          start: "top 80%",  
+          start: "top 50%",  
           end: "top 20%",
           scrub: true, 
         },
