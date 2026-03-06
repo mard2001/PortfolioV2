@@ -15,7 +15,7 @@ const Footer = () => {
     };
 
     return (
-        <div className='relative text-center mt-60' id='Contact'>
+        <div className='relative text-center mt-30' id='Contact'>
             <h1 className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground'>Let’s build something together</h1>
             <p className='text-sm text-muted-foreground mb-10'>Have a project in mind? I'm currently available for freelance work or full time work and open to new opportunities.</p>
             

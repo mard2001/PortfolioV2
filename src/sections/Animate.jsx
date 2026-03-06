@@ -92,6 +92,7 @@ const Animate = () => {
                         <p className='text-muted-foreground'>It makes me happy when clients are satisfied as this reflect my work quality and my character.</p>
                     </div>
                 </div>
+                <hr className='w-100 mx-auto text-primary/30 mt-35'/>
             </div>
         </section>
     )
