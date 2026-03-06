@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ponomar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
 @import "tailwindcss";
 
@@ -298,5 +299,65 @@
     background-clip: text;
     color: transparent;
   }
+
+  .masked-img {
+    -webkit-mask-image: url("/images/codeFile.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    mask-image: url("/images/codeFile.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+  }
+
+  .masked-container{
+    opacity: 0;
+  }
+
+  #Animate {
+    position: relative;
+    z-index: 1;
+  }
+
+  #Animate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.7)
+      
+    ),  url("/images/background1.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.02;
+    z-index: -1;
+  }
+
+  #animateHeader{
+    font-family: "DM Serif Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: rgba(100, 116, 139, 0.2);
+    text-align: center;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+  }
+
+  #animateSubHeader{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  .maskedHeaderText{
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
 }
 

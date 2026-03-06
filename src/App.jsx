@@ -10,6 +10,7 @@ import Technologies from "./sections/Technologies"
 import Testimony from "./sections/Testimony"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
+import Animate from "./sections/Animate"
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -25,6 +26,7 @@ function App() {
         <Projects />
         <Testimony />
         {/* <Contact /> */}
+        <Animate />
         <Footer />
       </main>
     </div>

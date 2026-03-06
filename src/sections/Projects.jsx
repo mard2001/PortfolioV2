@@ -98,25 +98,25 @@ export default function Projects() {
   return (
     <>
       <div id='Projects' className='pt-20'>
-        <section className='container mx-auto px-3 relative overflow-hidden'>
+        <section className='px-3 relative overflow-hidden'>
           <div className='absolute top-1/4 right-1/64 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2' />
           <div className='absolute top-1/4 left-1/64 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2' />
           <div className='absolute bottom-32 right-1/64 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2' />
 
-          <div className='mb-15 flex flex-col items-center text-center'>
-            <div pan className='projMiniTitle'>
-              <span className='text-secondary text-sm font-medium tracking-wider uppercase animate-fade-in'>"Code & Craft"</span>
+          <div className="container mx-auto">
+            <div className='mb-15 flex flex-col items-center text-center'>
+              <div pan className='projMiniTitle'>
+                <span className='text-secondary text-sm font-medium tracking-wider uppercase animate-fade-in'>"Code & Craft"</span>
+              </div>
+              <h2 className='projTitle text-4xl md:text-5xl font-bold mt-3 mb-2 animate-fade-in animation-delay-100 text-secondary-foreground'>Featured Deployments</h2>
+              <p className='projSubHeader text-muted-foreground'>Transforming complex business requirements into elegant digital products.</p>
             </div>
-            <h2 className='projTitle text-4xl md:text-5xl font-bold mt-3 mb-2 animate-fade-in animation-delay-100 text-secondary-foreground'>Featured Deployments</h2>
-            <p className='projSubHeader text-muted-foreground'>Transforming complex business requirements into elegant digital products.</p>
+            <div ref={scrollRef} className='projectsContainer mb-20 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
+              {projects.map((project, indx) => (
+                <ProjCard key={indx} project={project} onOpen={handleOpen}/>
+              ))}
+            </div>
           </div>
-          <div ref={scrollRef} className='projectsContainer mb-20 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
-            {projects.map((project, indx) => (
-              <ProjCard key={indx} project={project} onOpen={handleOpen}/>
-            ))}
-          </div>
-
-          
         </section>
       </div>
 

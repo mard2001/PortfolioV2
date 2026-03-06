@@ -1,5 +1,5 @@
 import { Code2, CodeSquare, Facebook, FacebookIcon, Github, HandFist, Handshake, Linkedin, Mail, MonitorSmartphone, Users } from "lucide-react";
-import { mdiGithub, mdiFacebook, mdiLinkedin } from '@mdi/js';
+import { mdiGithub, mdiFacebook, mdiLinkedin, mdiApplicationBraces, mdiConsolidate, mdiAppleKeyboardCommand, mdiAsteriskCircleOutline, mdiArrangeSendToBack, mdiHexagonSlice4, mdiMonitorDashboard, mdiShieldCheckOutline, mdiApplicationBracketsOutline } from '@mdi/js';
 
 
 export const navLinks = [
@@ -335,5 +335,17 @@ export const contactInfo = [
 ]
 
 
+export const leftData = [
+    { icon: mdiApplicationBracketsOutline, header: 'Full-Stack Development', subContent: 'Building end-to-end web applications.'},
+    { icon: mdiConsolidate, header: 'System Integration', subContent: 'Connecting APIs, databases, and external services.'},
+    { icon: mdiAppleKeyboardCommand, header: 'Performance Optimization', subContent: 'Improving speed and scalability of applications.'},
+    { icon: mdiMonitorDashboard, header: 'Dashboard Systems', subContent: 'Building data-driven dashboards and analytics tools.'},
+] 
 
+export const rightData = [
+    { icon: mdiAsteriskCircleOutline, header: 'Problem Solving', subContent: 'Breaking complex problems into simple solutions.'},
+    { icon: mdiArrangeSendToBack, header: 'Scalable Architecture', subContent: 'Designing systems ready for growth.'},
+    { icon: mdiHexagonSlice4, header: 'Continuous Improvement', subContent: 'Refactoring and evolving codebases for long-term success.'},
+    { icon: mdiShieldCheckOutline, header: 'Attention to Detail', subContent: 'Ensuring accuracy and quality in every feature built.'},
+] 
 
