@@ -24,7 +24,7 @@ const Animate = () => {
         maskTimeline
             .to('.content-will-fade',{ opacity: 0, stagger: 0.2, ease: 'power1.inOut'})
             .to('.masked-img', {scale: 1.3, maskPosition: 'top', maskSize: '1400%', duration: 5, ease: 'power1.inOut'})
-            .to('.masked-container', {opacity: 1, delay: 5, duration: 3,  ease: 'power1.inOut'});
+            .to('.masked-container', {opacity: 1, duration: 1,  ease: 'power1.inOut'});
     })
 
     return (
