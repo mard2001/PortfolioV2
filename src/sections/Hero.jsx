@@ -150,7 +150,7 @@ export default function Hero() {
           {/* RIGHT COLUMN */}
           <div className='relative profileImgDiv'>
             {/* PROFILE IMAGE */}
-            <div className='relative max-w-md mx-auto'>
+            <div className='relative  w-[22.5rem] sm:w-[22.5rem] md:w-full md:max-w-md mx-auto'>
               <div className='absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse-glow'/>
               <div className='relative glass rounded-3xl p-2 glow-border'>
                 <img src="/images/ProfilePhoto2.jpg" alt="" className='w-full aspect-[4/5] object-cover rounded-2xl rotate-3 hover:rotate-0 duration-300 ' />
