@@ -41,7 +41,7 @@ const Animate = () => {
                     <div class="flex-1 h-px bg-gray-300 bg-primary"></div>
                 </div>
 
-                <div className="content flex flex-col items-center md:items-start md:justify-around md:flex-row pt-15">
+                <div className="content flex flex-col items-center md:items-start md:justify-around md:flex-row pt-15 px-10">
                     <ul className='space-y-4 content-will-fade order-1 md:order-1'>
                         {
                             leftData.map((item, index) => {
