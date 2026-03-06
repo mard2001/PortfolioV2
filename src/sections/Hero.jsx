@@ -100,22 +100,22 @@ export default function Hero() {
             {/* HEADLINE */}
             <div className='space-y-3'>
               {/* <h1 className='font-black text-4xl heroHeaderMain scale-y-125'>Hi, You can call me Marv,</h1> */}
-              <h2 className='text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground text-gradient heroHeader2Main '>Hi, You can call me Marv,</h2>
-              <h1 className="font-bold typeWriter text-4xl lg:text-3xl text-primary animate-fade-in animation-delay-2000">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "a Software Engineer.",
-                      "a Front-End Web Developer.",
-                      "a Back-End Web Developer.",
-                      "a Full-Stack Web Developer.",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    delay: 75,
-                    deleteSpeed: 50,
-                  }}
-                />
+              <h2 className='text-2xl md:text-5xl font-bold leading-tight text-secondary-foreground text-gradient heroHeader2Main '>Hi, You can call me Marv,</h2>
+              <h1 className="font-bold typeWriter text-2xl md:text-4xl lg:text-3xl text-primary animate-fade-in animation-delay-2000">
+                  <Typewriter
+                    options={{
+                      strings: [
+                        "a Software Engineer.",
+                        "a Front-End Web Developer.",
+                        "a Back-End Web Developer.",
+                        "a Full-Stack Web Developer.",
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      delay: 75,
+                      deleteSpeed: 50,
+                    }}
+                  />
               </h1>
               <p className='text-lg text-muted-foreground max-w-lg heroAboutSelf'>
                 {shortAboutSelf}
