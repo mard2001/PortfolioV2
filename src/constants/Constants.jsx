@@ -176,7 +176,7 @@ export const projects = [
             {value:'Improved',title:'UI/UX'},
         ],
         duration: '5 Months (2023)',
-        role: 'Team Lead • Project Manager • Developer',
+        role: 'Web Developer',
         client: 'Brgy. Talamban Health Center',
         link:'https://mybuddysfa.com/'
     },
@@ -279,7 +279,7 @@ export const projects = [
         ],
         impact:[
         ],
-        duration: '9 Months (2025 - 2025)',
+        duration: '9 Months (2025)',
         role: 'Full Stack Web Developer',
         client: 'N/A',
         link:''
