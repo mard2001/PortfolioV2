@@ -214,7 +214,7 @@ export const projects = [
         tech: ["SQL", "SQL Server", "Metabase",],
         github: "",
         demo: "https://mncanalytics.dynns.com",
-        images: ["MNCAnalytics.jpg", "MNCAnalytics2.jpg", "MNCAnalytics3.jpg", "MNCAnalytics4.jpg", "MNCAnalytics5.jpg"],
+        images: ["MNCAnalytics.jpg", "MNCAnalytics2.jpg", "MNCAnalytics3.jpg", "MNCAnalytics4.jpg", "MNCAnalytics5.jpg", "MNCAnalytics6.jpg", "MNCAnalytics7.jpg", "MNCAnalytics8.jpg"],
         fullDescription: [
             'This project was a special project requested by the Monde Nissin Commercial Department, with the goal of converting large volumes of unprocessed data into reliable analytical insights that could be used for future planning and strategic improvements.',
             'Using SQL, raw sales and sell-out data were cleaned, transformed, and structured into meaningful business analytics to support reporting and decision-making.',
@@ -288,21 +288,21 @@ export const projects = [
 ]
 
 export const testimonies = [
-    // {
-    //     name: "Jhunrey Lucero",
-    //     relation: "Senior Software Eng. at FDC",
-    //     content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-    //     link: "",
-    // },
+    {
+        name: "Jhunrey Lucero",
+        relation: "Senior Software Eng. at Fast Distribution Corp.",
+        content: "You’ve been an incredible asset—a truly skilled Software Engineer II whose work on the web and backend played a big role in our growth and success. Beyond your technical expertise, it’s your dedication, reliability, and the way you carried yourself as a professional that made a lasting impact on all of us. The connections you’ve built here go beyond just being coworkers.",
+        link: "",
+    },
     {
         name: "Kyle James Mantua",
-        relation: "Digital Sales & Marketing · Pinnacle",
+        relation: "Digital Sales & Marketing · Pinnacle Publishing",
         content: "Marvin has consistently delivered all necessary components for our website. His exceptional responsiveness and communication skills are highly valued. I confidently recommend collaborating with his team for efficient and effective website development.",
         link: "",
     },
     {
         name: "Daven Reez Nemenzo",
-        relation: "UI/UX Designer at FDC",
+        relation: "UI/UX Designer at Fast Distribution Corp.",
         content: "As a colleague, he is polite, approachable, and dependable. He is highly committed to his work and is even willing to sacrifice his personal time to complete his tasks ahead of schedule. As a UI/UX Designer, I am always amazed at how quickly he brings my designs to life. He collaborates closely with me to ensure we deliver the best possible output. He is also open to feedback and willing to listen to younger colleagues. Additionally, he is always eager to learn new things. Boss Marvs, as a friend, is someone you can truly rely on. He is like a big brother to me. He has taught me how to be wise and consistently encourages me to take risks if it helps me learn and grow. He constantly reminds me to know my worth and to value myself. Overall, Boss Marvs is one of the best colleagues I have ever had the privilege of working with.",
         link: "",
     },
@@ -312,12 +312,12 @@ export const testimonies = [
         content: "Working with Marvin during our capstone project made a huge difference in how our team functioned. He naturally stepped up as a leader, in a way that kept everyone grounded and focused. He was the one constantly checking progress, making sure we weren’t falling behind, and pushing us to actually deliver. When things got messy, he figured things out, found solutions, and kept the team moving forward. Marvin carries a strong sense of responsibility. If something needed to be done, he’d make sure it gets done, even if it meant doing extra work. He led by example, actively contributing to the work instead of just distributing it. That’s what made him the core strength of our team. More than skills, what stood out was his consistency and reliability. You could count on him. And in a big project like capstone, that’s everything. Any team he joins will definitely gain someone who leads with both competence and accountability.",
         link: "",
     },
-    // {
-    //     name: "Bryll Andales",
-    //     relation: "Colleague from USC",
-    //     content: "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    //     link: "",
-    // },
+    {
+        name: "Rafael Escabarte III",
+        relation: "Commercial Analytics Specialist · Monde Nissin Corp.",
+        content: "I’ve had the opportunity to work closely with Marvin on a company project towards data and dashboard automation, and I can confidently say he is an excellent collaborator and a professional. Marvin consistently demonstrates strong knowledge and understanding of his work, which reflects in the quality of his output and the way he approaches challenges. He is very easy to work with—approachable, respectful, and always open to discussions or feedback. Communication with Marvin has been smooth throughout; he is responsive and makes sure everyone stays aligned and informed. His professionalism stands out in how he handles tasks, timelines, and interactions with the team. What I appreciate most is his dedication and work ethic. Marvin gives his best effort in everything he does and takes ownership of his responsibilities to ensure the project is delivered successfully. He is reliable, proactive, and genuinely committed to producing great results. Overall, Marvin is not only skilled in his field but also a great person to work with. I would gladly collaborate with him again and highly recommend him to anyone looking for someone dependable, knowledgeable, and professional.",
+        link: "",
+    },
     {
         name: "Trisha Kate Lawas",
         relation: "Human Resource Manager",
