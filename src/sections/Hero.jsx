@@ -124,7 +124,10 @@ export default function Hero() {
 
             {/* CALL TO ACTION */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-500">
-              <a onClick={() => window.open('https://www.linkedin.com/in/marvin-navarro-01/', "_blank", "noopener,noreferrer")}>
+              {/* <a onClick={() => window.open('https://www.linkedin.com/in/marvin-navarro-01/', "_blank", "noopener,noreferrer")}>
+                <Button size='sm'>Download Resume</Button>
+              </a> */}
+              <a href="/Resume-MarvinNavarro-WebDeveloper.pdf" download >
                 <Button size='sm'>Download Resume</Button>
               </a>
               <a href="#Projects">
