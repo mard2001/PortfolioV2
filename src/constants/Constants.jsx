@@ -125,33 +125,36 @@ export const technologies = [
 
 export const projects = [
     {
-        title: "Talamban Health Connect",
-        description: "A capstone project was created to replace the health center’s old pen-and-paper process in Cebu. The system includes a queue management feature and a secure, centralized database to store records of all registered patients.",
-        tech: ["MongoDB", "ExpressJs", "ReactJs", "NodeJs"],
-        github: "https://github.com/MarvinNavarro01/Deployment",
-        demo: "",
-        images: ["THC.jpg"],
+        title: "Bunal Brad Booking System",
+        description: "A booking and facility management platform for pickleball and basketball courts — built for Philippine sports startups, from real-time court reservations to payment tracking and revenue insights.",
+        tech: ["ReactJs", "NodeJs", "ExpressJs", "MySQL"],
+        github: "https://github.com/mard2001/BookingSystem",
+        demo: "https://bunalbrad.netlify.app/",
+        images: ["bunalBrad1.png","bunalBrad2.png","bunalBrad3.png","bunalBrad4.png","bunalBrad5.png","bunalBrad6.png","bunalBrad7.png","bunalBrad8.png","bunalBrad9.png","bunalBrad10.png","bunalBrad11.png","bunalBrad12.png"],
         fullDescription: [
-            'A capstone project was developed to replace the Talamban Health Center’s traditional pen-and-paper process in Cebu. The system was designed to support daily operations by organizing patient flow through a queue management feature, helping reduce long waiting times and improve overall service efficiency.',
-            'The system also includes a secure, centralized database hosted in the cloud, where records of all registered patients are stored and managed. This allows health workers to easily access patient information anytime, as long as they are authorized and registered in the system. By digitizing patient records, the system minimizes errors, prevents data loss, and improves record accuracy.',
-            'With faster access to information and a more organized workflow, health workers can focus more on patient care rather than manual paperwork.'
+            "is an all-in-one court booking and facility management platform built for pickleball venues in the Philippines. It's designed for the startup sports-facility owner who needs professional booking infrastructure without an enterprise price tag or a team of developers",
+            "For facility owners, it replaces the spreadsheet-and-group-chat approach to running a court business with a proper management dashboard: a live calendar view of every court's schedule, automated booking status tracking from pending through completed, payment monitoring with automatic expiry on unpaid reservations, and analytics on revenue, occupancy, and customer activity — all calculated in Philippine time, on Philippine business hours.",
+            "For players, the system offers a straightforward, multi-step reservation flow: pick a court, choose a date and time slot, and pay directly through GCash or manual e-wallet transfer — no back-and-forth messaging required, with real-time slot availability so double-bookings simply can't happen.",
+            "Built with a modern, reliable stack (React/Vite frontend, Node.js/Express backend, MySQL database) and PayMongo for local payment processing, ",
         ],
         techChallenges: [
-            'The website needed to work properly on different screen sizes such as mobile phones, tablets, desktops, and even televisions. I carefully adjusted the layout, images, and text to make sure the design remains clean and easy to use on any device.',
-            'Ensuring data privacy and security was critical because the system handles sensitive patient information. I implemented authentication, role-based access, and encryption for data in transit and at rest.',
-            'Optimizing performance and responsiveness by lazy-loading React components, splitting code, and caching API responses to make the system fast for all users.',
-            'Implementing complex user roles and permissions (doctor, nurse, admin, patient) so each user only sees and interacts with what they are authorized to.',
-            'Designing intuitive UI/UX for complex workflows to reduce errors and make it easy for healthcare staff to navigate dashboards, forms, and alerts.',
-            'Handling challenges with version control and collaborative coding in GitHub, which is essential when working in a team environment.'
+            "PayMongo QRPh integration end-to-end — payment intent creation, QR code display, and webhook handling, while polling own database rather than trusting alone in PayMongo's API state directly",
+            "Booking status lifecycle enforcement — a validateTransition guard ensuring bookings can only move through valid states (pending → confirmed → completed, with cancelled/rejected as terminal states), preventing invalid state jumps from bugs or race conditions.",
+            "Consistently handling Asia/Manila time throughout the stack",
+            "Calendar data fetching at monthly caching so scrolling through a calendar doesn't refetch data for months already loaded.",
         ],
         impact:[
-            { value: '100%', title: 'Accessibility' }, 
-            { value: '100%', title: 'Data Accuracy' },   
+            { value: 'Real-time', title: 'Accessibility' }, 
+            { value: '24/7', title: 'Availability' },
+            { value: '< 1 Min', title: 'Booking Time' },
+            { value: 'Zero', title: 'Double Bookings' },
+            { value: 'Secure', title: 'Online Payments' },
+            { value: 'Automated', title: 'Scheduling' },
         ],
-        duration: '5 Months (2023)',
+        duration: '3 Months (2026)',
         role: 'Project Manager / Developer',
-        client: 'Brgy. Talamban Health Center',
-        link:''
+        client: 'Local Start-up Business Owner',
+        link: "https://bunalbrad.netlify.app/"
     },
     {
         title: "MyBuddy SFA",
@@ -284,7 +287,35 @@ export const projects = [
         client: 'N/A',
         link:''
     },
-
+    {
+        title: "Talamban Health Connect",
+        description: "A capstone project was created to replace the health center’s old pen-and-paper process in Cebu. The system includes a queue management feature and a secure, centralized database to store records of all registered patients.",
+        tech: ["MongoDB", "ExpressJs", "ReactJs", "NodeJs"],
+        github: "https://github.com/MarvinNavarro01/Deployment",
+        demo: "",
+        images: ["THC.jpg"],
+        fullDescription: [
+            'A capstone project was developed to replace the Talamban Health Center’s traditional pen-and-paper process in Cebu. The system was designed to support daily operations by organizing patient flow through a queue management feature, helping reduce long waiting times and improve overall service efficiency.',
+            'The system also includes a secure, centralized database hosted in the cloud, where records of all registered patients are stored and managed. This allows health workers to easily access patient information anytime, as long as they are authorized and registered in the system. By digitizing patient records, the system minimizes errors, prevents data loss, and improves record accuracy.',
+            'With faster access to information and a more organized workflow, health workers can focus more on patient care rather than manual paperwork.'
+        ],
+        techChallenges: [
+            'The website needed to work properly on different screen sizes such as mobile phones, tablets, desktops, and even televisions. I carefully adjusted the layout, images, and text to make sure the design remains clean and easy to use on any device.',
+            'Ensuring data privacy and security was critical because the system handles sensitive patient information. I implemented authentication, role-based access, and encryption for data in transit and at rest.',
+            'Optimizing performance and responsiveness by lazy-loading React components, splitting code, and caching API responses to make the system fast for all users.',
+            'Implementing complex user roles and permissions (doctor, nurse, admin, patient) so each user only sees and interacts with what they are authorized to.',
+            'Designing intuitive UI/UX for complex workflows to reduce errors and make it easy for healthcare staff to navigate dashboards, forms, and alerts.',
+            'Handling challenges with version control and collaborative coding in GitHub, which is essential when working in a team environment.'
+        ],
+        impact:[
+            { value: '100%', title: 'Accessibility' }, 
+            { value: '100%', title: 'Data Accuracy' },   
+        ],
+        duration: '5 Months (2023)',
+        role: 'Project Manager / Developer',
+        client: 'Brgy. Talamban Health Center',
+        link:''
+    },
 ]
 
 export const testimonies = [
