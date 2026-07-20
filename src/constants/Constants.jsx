@@ -130,7 +130,7 @@ export const projects = [
         tech: ["ReactJs", "NodeJs", "ExpressJs", "MySQL"],
         github: "https://github.com/mard2001/BookingSystem",
         demo: "https://bunalbrad.netlify.app/",
-        images: ["bunalBrad1.png","bunalBrad2.png","bunalBrad3.png","bunalBrad4.png","bunalBrad5.png","bunalBrad6.png","bunalBrad7.png","bunalBrad8.png","bunalBrad9.png","bunalBrad10.png","bunalBrad11.png","bunalBrad12.png"],
+        images: ["bunalBrad1.png","bunalBrad2.png","bunalBrad3.png","bunalBrad4.png","bunalBrad13.png","bunalBrad14.png","bunalBrad15.png","bunalBrad16.png", "bunalBrad5.png","bunalBrad6.png","bunalBrad7.png","bunalBrad8.png","bunalBrad9.png","bunalBrad10.png","bunalBrad11.png","bunalBrad12.png"],
         fullDescription: [
             "is an all-in-one court booking and facility management platform built for pickleball venues in the Philippines. It's designed for the startup sports-facility owner who needs professional booking infrastructure without an enterprise price tag or a team of developers",
             "For facility owners, it replaces the spreadsheet-and-group-chat approach to running a court business with a proper management dashboard: a live calendar view of every court's schedule, automated booking status tracking from pending through completed, payment monitoring with automatic expiry on unpaid reservations, and analytics on revenue, occupancy, and customer activity — all calculated in Philippine time, on Philippine business hours.",
@@ -152,7 +152,7 @@ export const projects = [
             { value: 'Automated', title: 'Scheduling' },
         ],
         duration: '3 Months (2026)',
-        role: 'Project Manager / Developer',
+        role: 'Project Manager / Full-Stack Developer',
         client: 'Local Start-up Business Owner',
         link: "https://bunalbrad.netlify.app/"
     },

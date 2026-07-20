@@ -109,6 +109,8 @@ export default function Hero() {
                         "a Front-End Web Developer.",
                         "a Back-End Web Developer.",
                         "a Full-Stack Web Developer.",
+                        "a Data Engineer.",
+                        "a Data Analyst.",
                       ],
                       autoStart: true,
                       loop: true,
