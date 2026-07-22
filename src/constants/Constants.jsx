@@ -9,7 +9,7 @@ export const navLinks = [
     { href: "#Testimony", label: "Testimonials" },
 ];
 
-export const shortAboutSelf = `A software engineer specializing in front-end and back-end web development. I build accessible, well-designed, and high-performance websites using modern web technologies.`;
+export const shortAboutSelf = `A software engineer with experience in full-stack web development, data analytics, and building scalable, high-performance web applications. I specialize in creating responsive and user-focused solutions, developing robust backend systems, integrating APIs, and transforming data into actionable insights using modern technologies.`;
 
 export const socMedLinks = [
     {icon: mdiGithub, href:"https://github.com/mard2001"},
@@ -55,14 +55,16 @@ export const highlights = [
 export const AboutSelfData  =  () => (
     <>
         <p>
-            I started my career in software development before finishing my degree in Information Technology. Since then, I’ve gained hands-on experience working with fast-paced teams and building practical software for real-world use.
+            I started my career in software development before completing my degree in Information Technology, gaining hands-on experience building and maintaining software in fast-paced, real-world environments. Since then, I’ve worked across full development life cycle and data analytics, contributing to solutions that support both technical and business needs.
         </p>
         <p>
-            I work on both front-end and back-end development, helping create systems that are reliable, scalable, and easy to maintain. I enjoy learning new tools, working with teams, and turning complex ideas into simple, useful solutions.
-            I’m always learning and open to improving my skills. I can quickly adapt to new tools and technologies, and I’m comfortable working with guidance when needed. I enjoy working with teams and care a lot about writing clean, easy-to-maintain code.
+            I specialize in building responsive front-end interfaces, developing reliable back-end systems, integrating APIs, and working with databases and data-driven applications. My experience includes developing web applications, sales and tracking systems, analytics dashboards, and other digital solutions designed to improve efficiency and support better decision-making.
         </p>
         <p>
-            My focus is on building reliable and scalable systems—whether it’s web applications, tracking systems, or other digital solutions. I enjoy turning complex ideas into simple, useful products that make a real impact.
+            I’m passionate about writing clean, maintainable code and building systems that are reliable, scalable, and easy to use. I enjoy breaking down complex problems into practical solutions, collaborating with teams, and continuously learning new technologies. I’m adaptable, comfortable working independently or with guidance, and always open to improving my skills and exploring better ways to solve problems.
+        </p>
+        <p>
+            My goal is simple: to build technology that works reliably, solves real problems, and creates meaningful value for the people and businesses that use it.
         </p>
     </>
 );
@@ -70,37 +72,36 @@ export const AboutSelfData  =  () => (
 
 export const experiences = [
     {
-        period: "Feb 2025 - Mar 2026",
-        role: "Software Engineer - Full Time",
+        period: "Aug 2025 - Apr 2026",
+        role: "Data Analyst",
         company: "Fast Distribution Corp.",
         description: [
-                        `As a full-time full-stack developer, I work on a Sales Force Automation web dashboard that provides real-time tracking and monitoring of sales teams using the Google Maps API. I manage the front-end, prepare APIs on the back-end, and ensure smooth data flow between systems.`,
-                        `I execute and optimize stored procedures to transform raw data into structured datasets for analytical reporting. Using Metabase to create sales and customer analytics that support data-driven decision-making.`
+                        `Analyzed and transformed business and sales data into structured datasets to support reporting, performance tracking, and data-driven decision-making. Developed and maintained Metabase dashboards to monitor key sales and customer metrics, identify trends, and provide actionable insights to stakeholders.`,
+                        `Optimized SQL queries and stored procedures to improve data processing and reporting efficiency. Collaborated with commercial teams to validate data accuracy, investigate discrepancies, and deliver reliable analytical reports.`
                     ],
-        technologies: ["Laravel", "SQL", "Google Maps API", "Metabase", "JQuery"],
+        technologies: ["SQL", "Microsoft SQL Server", "Metabase", "Data Analysis", "Data Visualization"],
+        current: false,
+    },
+    {
+        period: "Sept 2023 - Apr 2026",
+        role: "Software Engineer",
+        company: "Fast Distribution Corporation",
+        description: [
+                        `Developed and maintained full-stack web applications, including a Sales Force Automation dashboard used to monitor and track sales team activities in real time. Built responsive user interfaces, developed backend APIs, integrated Google Maps API features, and ensured reliable data flow across application components.`,
+                        `Collaborated with cross-functional teams to develop scalable solutions, troubleshoot production issues, optimize application performance, and improve overall system usability and reliability.`,
+                        ``
+                    ],
+        technologies: ["Laravel", "PHP", "JavaScript", "jQuery", "SQL", "Google Maps API"],
         current: true,
     },
     {
-        period: "Feb 2024 - Jan 2025",
-        role: "Software Engineer - Contractual",
-        company: "Fast Distribution Corp.",
-        description: [`Worked as a frontend developer, improving the website’s UI and adding Google Maps features to enhance usability. Built responsive components, collaborated with teams to integrate APIs, and helped improve performance and scalability.`],
-        technologies: ["Bootstrap", "Google Maps API", "JQuery", "PHP", "Laravel"],
-        current: false,
-    },
-    {
-        period: "Sept 2023 - Jan 2024",
-        role: "Web Developer Intern",
-        company: "Fast Distribution Corp.",
-        description: [`Improved the company website by building a modern, user-friendly interface. Gained experience in Business Intelligence by using Metabase for data visualization and basic analysis.`],
-        technologies: ["Metabase", "HTML", "CSS", "JavaScript", "Bootstrap"],
-        current: false,
-    },
-    {
-        period: "May 2021",
+        period: "May 2023",
         role: "Freelance Web Developer",
         company: "Freelance",
-        description: [`Built and maintained websites using JavaScript, HTML, and Bootstrap. Worked directly with clients to plan and develop custom blogs and online stores using WordPress, focusing on usability and clean design.`],
+        description: [
+                        `Designed, developed, and maintained responsive websites and e-commerce stores using WordPress, WooCommerce, and Shopify. Worked directly with clients to understand business requirements, customize website layouts and functionality, and deliver user-friendly digital experiences.`,
+                        `Built and customized websites using HTML, CSS, JavaScript, and Bootstrap, with a focus on responsive design, usability, performance, and clean implementation.`
+                    ],
         technologies: [ "Wordpress", "HTML", "CSS", "JavaScript"],
         current: false,
     },
