@@ -129,7 +129,7 @@ export default function Hero() {
               {/* <a onClick={() => window.open('https://www.linkedin.com/in/marvin-navarro-01/', "_blank", "noopener,noreferrer")}>
                 <Button size='sm'>Download Resume</Button>
               </a> */}
-              <a href="/Resume-MarvinNavarro-WebDeveloper.pdf" download >
+              <a href="/MarvinNavarro-Resume.pdf" download >
                 <Button size='sm'>Download Resume</Button>
               </a>
               <a href="#Projects">
